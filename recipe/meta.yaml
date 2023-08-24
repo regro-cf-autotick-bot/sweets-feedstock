@@ -27,23 +27,20 @@ requirements:
   run:
     - python >=3.8
     - aria2 # ASF Downloading
-    - isce3
-    - compass
+    - isce3 >=0.14.0
+    - compass >=0.4.1
     - dask
     - dolphin
-    - fiona
     - gdal
-    - geopandas-base
     - h5py
     - hdf5 !=1.12.2 # https://github.com/SciTools/iris/issues/5187 and https://github.com/pydata/xarray/issues/7549
-    - matplotlib-base
     - numpy
-    - pandas
-    - pydantic <2
+    - pydantic >=2.1
+    - pyproj>=3.3
+    - python-dateutil
     - requests
     - rich
     - rioxarray
-    - s1reader
     - sardem
     - sentineleof
     - shapely
@@ -51,6 +48,7 @@ requirements:
 test:
   imports:
     - sweets
+    - sweets.core
   commands:
     - sweets --help
   requires:
