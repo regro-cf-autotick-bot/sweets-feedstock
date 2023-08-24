@@ -36,7 +36,7 @@ requirements:
     - hdf5 !=1.12.2 # https://github.com/SciTools/iris/issues/5187 and https://github.com/pydata/xarray/issues/7549
     - numpy
     - pydantic >=2.1
-    - pyproj>=3.3
+    - pyproj >=3.3
     - python-dateutil
     - rasterio
     - requests
