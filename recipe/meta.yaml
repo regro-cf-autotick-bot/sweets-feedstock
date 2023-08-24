@@ -1,5 +1,5 @@
 {% set name = "sweets" %}
-{% set version = "0.1.0" %}
+{% set version = "0.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/isce-framework/sweets/archive/v{{ version }}.tar.gz
-  sha256: e62aa647d7aab8185e92c28cb4611d00cf4f62071b5ff27d48cbde614cc62ace
+  sha256: 47e4f59424e660deafe9ca5c9ea78792576b55f5d43feb0fd3169409688f2fd7
 
 build:
   entry_points:
@@ -27,23 +27,21 @@ requirements:
   run:
     - python >=3.8
     - aria2 # ASF Downloading
-    - isce3
-    - compass
+    - isce3 >=0.14.0
+    - compass >=0.4.1
     - dask
-    - dolphin
-    - fiona
+    - dolphin >=0.3.0
     - gdal
-    - geopandas-base
     - h5py
     - hdf5 !=1.12.2 # https://github.com/SciTools/iris/issues/5187 and https://github.com/pydata/xarray/issues/7549
-    - matplotlib-base
     - numpy
-    - pandas
-    - pydantic <2
+    - pydantic >=2.1
+    - pyproj >=3.3
+    - python-dateutil
+    - rasterio
     - requests
     - rich
     - rioxarray
-    - s1reader
     - sardem
     - sentineleof
     - shapely
@@ -51,6 +49,7 @@ requirements:
 test:
   imports:
     - sweets
+    - sweets.core
   commands:
     - sweets --help
   requires:
