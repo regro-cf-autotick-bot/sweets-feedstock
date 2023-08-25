@@ -26,8 +26,7 @@ requirements:
     - pip >=21.3
   run:
     - python >=3.8
-    - aria2 # ASF Downloading
-    - isce3 >=0.14.0
+    - wget # ASF Downloading
     - compass >=0.4.1
     - dask
     - dolphin >=0.3.0
@@ -37,6 +36,7 @@ requirements:
     - numpy
     - pydantic >=2.1
     - pyproj >=3.3
+    - pyre >=1.12.1 
     - python-dateutil
     - rasterio
     - requests
