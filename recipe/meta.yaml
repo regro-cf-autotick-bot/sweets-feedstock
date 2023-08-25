@@ -1,5 +1,5 @@
 {% set name = "sweets" %}
-{% set version = "0.2.0" %}
+{% set version = "0.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/isce-framework/sweets/archive/v{{ version }}.tar.gz
-  sha256: 47e4f59424e660deafe9ca5c9ea78792576b55f5d43feb0fd3169409688f2fd7
+  sha256: a3d4f6813e18c0484d24970565a9bbe8b1d0bcb074308f53583b1706b4332673
 
 build:
   entry_points:
