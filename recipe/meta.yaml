@@ -16,16 +16,16 @@ build:
   script:
     - export SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
     - {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - setuptools >=64.0
     - setuptools-scm >=6.2
     - pip >=21.3
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - wget # ASF Downloading
     - compass >=0.4.1
     - dask
@@ -54,6 +54,7 @@ test:
     - sweets --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/isce-framework/sweets
